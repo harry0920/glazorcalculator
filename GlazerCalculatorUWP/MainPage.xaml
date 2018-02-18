@@ -7,7 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid x:Name="GlazerCalculator" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="559*"/>
+            <RowDefinition/>
+            <RowDefinition Height="161*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="WidthBox" HorizontalAlignment="Left" Margin="99,199,0,-266" Text="" VerticalAlignment="Top" Height="67" Width="115" Header="Width" RenderTransformOrigin="0.474,-1.187" Background="#66B24646" TextChanged="WidthBox_TextChanged" Grid.RowSpan="3"/>
+        <TextBox x:Name="HeightBox" HorizontalAlignment="Left" Margin="98,359,0,-425" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.629,2.25" Height="66" Width="118" Header="Height" Background="#66AA3838" TextChanged="HeightBox_TextChanged" Grid.RowSpan="3"/>
+        <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Left" Height="41" Margin="549,17.5,0,0" VerticalAlignment="Top" Width="127" Click="submitButton_Click" Grid.Row="2"/>
+        <TextBlock x:Name="widthError" HorizontalAlignment="Left" Margin="30,272,0,-318" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Height="46" Grid.RowSpan="3"/>
+        <TextBlock x:Name="heightError" HorizontalAlignment="Left" Margin="41,435,0,-481" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="252" SelectionChanged="TextBlock_SelectionChanged" Grid.RowSpan="3"/>
+        <ListBox x:Name="Tint_Color" HorizontalAlignment="Left" Height="134" Margin="468,228,0,-362" Grid.RowSpan="3" VerticalAlignment="Top" Width="175">
+            <ListBoxItem Content="Black"/>
+            <ListBoxItem Content="Brown" Width="174"/>
+            <ListBoxItem Content="Blue"/>
+        </ListBox>
+        <Slider x:Name="quantityslider" HorizontalAlignment="Left" Margin="423,431,0,-495" Grid.RowSpan="3" VerticalAlignment="Top" Width="265" Maximum="10" Minimum="1" Header="Quantity"/>
+        <TextBlock HorizontalAlignment="Left" Margin="476,184,0,-219" Text="Tint Color" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="142" FontSize="14" Grid.RowSpan="3"/>
+        <TextBlock x:Name="HeightOutput" HorizontalAlignment="Left" Height="48" Margin="818,255,0,-303" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Grid.RowSpan="3" RenderTransformOrigin="0.469,2.113"/>
+        <TextBlock x:Name="WidthOutput" HorizontalAlignment="Left" Height="40" Margin="820,191,0,-231" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Grid.RowSpan="3"/>
+        <TextBlock x:Name="TintColorOutput" HorizontalAlignment="Left" Height="44" Margin="818,316,0,-360" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Grid.RowSpan="3"/>
+        <TextBlock x:Name="QuantityOutput" HorizontalAlignment="Left" Height="47" Margin="815,373,0,-420" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Grid.RowSpan="3"/>
+        <TextBlock x:Name="dateOutput" HorizontalAlignment="Left" Height="52" Margin="811,541,0,-593" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform SkewX="2.526" TranslateX="0.706"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="lengthOutput" HorizontalAlignment="Left" Height="46" Margin="815,425,0,-471" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Grid.RowSpan="3"/>
+        <TextBlock x:Name="areaOutput" HorizontalAlignment="Left" Height="47" Margin="815,479,0,-526" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Grid.RowSpan="3"/>
     </Grid>
 </Page>
